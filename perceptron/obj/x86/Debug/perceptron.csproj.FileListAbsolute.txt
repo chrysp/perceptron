@@ -18,3 +18,10 @@ C:\Users\Chrys\Dropbox\Summer12\CAP 5615 - Intro to Neural Networks\Term Project
 C:\Users\Chrys\Dropbox\Summer12\CAP 5615 - Intro to Neural Networks\Term Project\perceptron\perceptron\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\perceptron.exe
 C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\perceptron.pdb
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\bin\Debug\perceptron.exe
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\bin\Debug\perceptron.pdb
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\perceptron.Form1.resources
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\perceptron.Properties.Resources.resources
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Chrys\Documents\Visual Studio 2010\Projects\perceptron\perceptron\obj\x86\Debug\GenerateResource.write.1.tlog

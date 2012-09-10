@@ -39,20 +39,12 @@ namespace perceptron
             boundary.ChartType = SeriesChartType.Line;
         }
 
-        private void DrawBoundaryLine()
+        private void DrawBoundaryLine(double xmin, double xmax)
         {
             boundary.Points.Clear();
-            double x, c1, c2;
-            c1 = class1.Points.FindMinByValue().YValues.First();
-            c2 = class2.Points.FindMinByValue().YValues.First();
-            x = Math.Min(c1, c2);
-            x -= 6;
-            boundary.Points.Add(new DataPoint(x, ((w1 / -w2) * x) + (wbias / -w2)));
-            c1 = class1.Points.FindMaxByValue().YValues.First();
-            c2 = class2.Points.FindMaxByValue().YValues.First();
-            x = Math.Max(c1, c2);
-            x += 6;
-            boundary.Points.Add(new DataPoint(x, ((w1 / -w2) * x) + (wbias / -w2)));
+
+            boundary.Points.Add(new DataPoint(xmin, ((w1 / -w2) * xmin) + (wbias / -w2)));
+            boundary.Points.Add(new DataPoint(xmax, ((w1 / -w2) * xmax) + (wbias / -w2)));
 
             if (displayEachIteration)
                 chart1.Update();
@@ -344,6 +336,19 @@ namespace perceptron
             if (dataFromBoxes == true)
                 AddPointsFromBoxes();
 
+            //Set chart axis sizes
+            double xmin, xmax, c1, c2;
+            c1 = class1.Points.FindMinByValue().YValues.First();
+            c2 = class2.Points.FindMinByValue().YValues.First();
+            xmin = Math.Min(c1, c2);
+            xmin -= 6;
+            chart1.ChartAreas[0].AxisX.Minimum = xmin;
+            c1 = class1.Points.FindMaxByValue().YValues.First();
+            c2 = class2.Points.FindMaxByValue().YValues.First();
+            xmax = Math.Max(c1, c2);
+            xmax += 6;
+            chart1.ChartAreas[0].AxisX.Maximum = xmax;
+
             //train
             //variables
             double alpha; //learningRate
@@ -421,7 +426,7 @@ namespace perceptron
                 }
                 if (displayEachIteration)
                     Thread.Sleep(50);
-                DrawBoundaryLine();
+                DrawBoundaryLine(xmin, xmax);
                 iteration++;
             }
             while (misclassified && (iteration <= maxIterations));

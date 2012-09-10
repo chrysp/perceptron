@@ -1,1 +1,1 @@
-perceptron
+Single layer perceptron simulation in C#
